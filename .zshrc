@@ -9,9 +9,9 @@ SAVEHIST=100000
 
 
 # Enable autosuggestions automatically
-# zle-line-init() {
-#     zle autosuggest-start
-# }
+zle-line-init() {
+    zle autosuggest-start
+}
 
 # zle -N zle-line-init
 
@@ -105,6 +105,7 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+	dotenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -138,4 +139,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+source /Users/quangvu/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source ~/.bash_profile
