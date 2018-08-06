@@ -266,3 +266,7 @@ function set_zsh_virtualenv () {
   echo "$_PYTHON_VIRTUALENV"
   unset _PYTHON_VIRTUALENV
 }
+
+function trim_lead_line() {
+  echo -e "$1" | sed '/./,$!d'
+}
