@@ -104,11 +104,21 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+    git
 	dotenv
 )
 
 source $ZSH/oh-my-zsh.sh
+
+if [ -f ~/.functions ]; then
+    source ~/.functions
+fi
+
+ZSH_PROMPT="$PROMPT"
+
+PROMPT='$(set_zsh_virtualenv)
+'"$(trim_lead_line $ZSH_PROMPT)"
+VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # User configuration
 
@@ -140,4 +150,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /Users/quangvu/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source ~/.bash_profile
