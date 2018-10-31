@@ -157,3 +157,5 @@ alias suspend-vagrant="cd ~/vagrant/box && vagrant suspend && cd -"
 alias chrome="open -a Google\ Chrome"
 alias pythonpath='export PYTHONPATH=`pwd`'
 alias logtail="source ~/.log_remote_server.sh $1 $2"
+alias hg_close="hg commit --close-branch -m 'close branch'"
+
