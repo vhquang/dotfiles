@@ -114,11 +114,12 @@ if [ -f ~/.functions ]; then
     source ~/.functions
 fi
 
+VIRTUAL_ENV_DISABLE_PROMPT=1
 ZSH_PROMPT="$PROMPT"
 
-PROMPT='$(set_zsh_virtualenv)
+PROMPT='
+$(set_zsh_virtualenv)
 '"$(trim_lead_line $ZSH_PROMPT)"
-VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # User configuration
 
