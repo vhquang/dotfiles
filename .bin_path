@@ -31,10 +31,6 @@ gpip(){
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
-# if [[ -d "$HOME/.pyenv" ]]; then
-# 	eval "$(pyenv init -)"
-# fi
-
 # path for mysql
 PATH="/usr/local/mysql/bin:${PATH}"
 export PATH
@@ -47,3 +43,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # path of openCV
 # export PATH="/usr/local/opt/opencv3/bin:$PATH"
+
+
+if [[ -d "$HOME/.pyenv" ]]; then
+	eval "$(pyenv init -)"
+    export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+fi
