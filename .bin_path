@@ -49,3 +49,9 @@ if [[ -d "$HOME/.pyenv" ]]; then
 	eval "$(pyenv init -)"
     export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 fi
+
+# path for CUDA and cudaDNN
+export CUDA_HOME=/usr/local/cuda
+export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:/usr/local/cuda/extras/CUPTI/lib
+export LD_LIBRARY_PATH=$DYLD_LIBRARY_PATH
+export PATH=$DYLD_LIBRARY_PATH:$PATH:/Developer/NVIDIA/CUDA-9.1/bin
