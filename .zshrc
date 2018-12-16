@@ -151,3 +151,6 @@ $(set_zsh_virtualenv)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /Users/quangvu/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# tell brew not to use git credential for public repo
+export HOMEBREW_NO_GITHUB_API=1
