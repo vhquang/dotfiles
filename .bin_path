@@ -20,7 +20,7 @@ export PARQUET_BUILD_TOOLCHAIN=$CONDA_PREFIX
 export ARROW_HOME=$CONDA_PREFIX
 export PARQUET_HOME=$CONDA_PREFIX
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # setup python environment
 source /usr/local/bin//virtualenvwrapper.sh
