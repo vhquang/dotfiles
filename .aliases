@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-# Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-alias g="git"
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -139,4 +132,3 @@ alias logtail="source ~/.log_remote_server.sh $1 $2"
 alias hg_close="hg commit --close-branch -m 'close branch'"
 
 alias compile="g++ -Wall -Werror -g3 -fsanitize=address -fno-omit-frame-pointer -Wno-format-security -lpthread -static-libasan -Wextra -O2 "
-
