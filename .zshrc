@@ -8,11 +8,6 @@ SAVEHIST=100000
 # export PURE_GIT_UNTRACKED_DIRTY=0
 
 
-# Enable autosuggestions automatically
-zle-line-init() {
-    zle autosuggest-start
-}
-
 # zle -N zle-line-init
 
 
@@ -45,7 +40,7 @@ fi;
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/quangvu/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -106,6 +101,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(
     git
 	dotenv
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -150,7 +146,6 @@ $(set_zsh_virtualenv)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /Users/quangvu/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # tell brew not to use git credential for public repo
 export HOMEBREW_NO_GITHUB_API=1

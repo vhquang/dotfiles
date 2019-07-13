@@ -2,7 +2,7 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-# git pull origin master;
+git pull origin master;
 
 function setupZshUbuntu() {
 	# install ZSH if needed
@@ -15,8 +15,14 @@ function setupZshUbuntu() {
 	# setup Oh-my-ZSH
 	if [ ! -d ~/.oh-my-zsh ]; then
 		echo "Installing oh-my-zsh";
-		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 	fi
+
+	# setup oh-my-zsh themes
+	
+	# setup oh-my-zsh plugins
+	# autosuggestions
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 }
 
 function syncSettings() {

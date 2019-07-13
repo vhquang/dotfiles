@@ -145,9 +145,9 @@ fi;
 # export ARROW_BUILD_TYPE=release
 
 # ## arrow's env for pip
-# # export ARROW_HOME=/Users/quangvu/code/arrow-dist
-# # export PARQUET_HOME=/Users/quangvu/code/arrow-dist
-# # export LD_LIBRARY_PATH=/Users/quangvu/code/arrow-dist/lib:$LD_LIBRARY_PATH
+# # export ARROW_HOME=$HOME/code/arrow-dist
+# # export PARQUET_HOME=$HOME/code/arrow-dist
+# # export LD_LIBRARY_PATH=$HOME/code/arrow-dist/lib:$LD_LIBRARY_PATH
 
 # ## arrow's env for conda
 # export ARROW_BUILD_TOOLCHAIN=$CONDA_PREFIX
@@ -189,5 +189,5 @@ fi;
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
 # added by Miniconda3 installer
-# export PATH="/Users/quangvu/miniconda3/bin:$PATH"
+# export PATH="$HOME/miniconda3/bin:$PATH"
 
