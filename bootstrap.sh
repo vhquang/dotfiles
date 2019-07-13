@@ -22,7 +22,11 @@ function setupZshUbuntu() {
 	
 	# setup oh-my-zsh plugins
 	# autosuggestions
-	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	__folder=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	if [ ! -d $__folder ]; then 
+		git clone https://github.com/zsh-users/zsh-autosuggestions $__folder
+	fi
+	unset __folder;
 }
 
 function syncSettings() {
