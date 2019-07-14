@@ -3,8 +3,8 @@ export GOPATH=$HOME/Dropbox/Codes/gocode
 export PATH=$PATH:$GOPATH/bin
 
 # set path for Android adb
-export PATH=$PATH:$HOME/Documents/android-sdk-macosx/platform-tools
-export PATH=$PATH:$HOME/Documents/android-sdk-macosx/tools
+# export PATH=$PATH:$HOME/Documents/android-sdk-macosx/platform-tools
+# export PATH=$PATH:$HOME/Documents/android-sdk-macosx/tools
 
 # build system for arrow
 export ARROW_BUILD_TYPE=release
@@ -22,18 +22,36 @@ export PARQUET_HOME=$CONDA_PREFIX
 
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+
 # setup python environment
-source /usr/local/bin//virtualenvwrapper.sh
-export PIP_REQUIRE_VIRTUALENV=true
+if type "virtualenvwrapper.sh" > /dev/null; then
+    source virtualenvwrapper.sh
+fi
+# export PIP_REQUIRE_VIRTUALENV=true
 gpip(){
    # bypass pip requirement for active virtualenv, use for update global package
    # ex: gpip install --upgrade pip setuptools wheel virtualenv
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$($HOME'/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
 # path for mysql
 PATH="/usr/local/mysql/bin:${PATH}"
-export PATH
 
 # rabbitMQ
 PATH="/usr/local/sbin:${PATH}"
