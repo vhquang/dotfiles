@@ -1,0 +1,101 @@
+[:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(255,255,255)'
+visible-name='transparent'
+palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+use-system-font=false
+use-transparent-background=true
+use-theme-colors=false
+font='Monospace 10'
+use-theme-transparency=false
+bold-color-same-as-fg=false
+bold-color='rgb(181,137,0)'
+background-color='rgb(0,0,0)'
+background-transparency-percent=21
+
+[:5eb2b80a-0e5c-47ce-a2e2-62f9d87c0545]
+foreground-color='rgb(131,148,150)'
+visible-name='testing'
+use-system-font=false
+use-transparent-background=false
+use-theme-colors=false
+font='Monospace 10'
+use-theme-transparency=false
+bold-color-same-as-fg=false
+background-color='rgb(0,43,54)'
+background-transparency-percent=21
+
+[:552146cd-c03b-44a5-b35e-a2f2a806e262]
+foreground-color='#444444444444'
+visible-name='Hemisu-light'
+palette=['#777777777777', '#FFFF00005555', '#737391910000', '#50503D3D1515', '#535380809191', '#5B5B34345E5E', '#535380809191', '#999999999999', '#999999999999', '#D6D65E5E7676', '#9C9CC7C70000', '#949475755555', '#9D9DB3B3CDCD', '#A1A18484A4A4', '#8585B2B2AAAA', '#BABABABABABA']
+use-system-font=false
+use-transparent-background=true
+use-theme-colors=false
+font='Monospace 10'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#999999999999'
+background-color='#EFEFEFEFEFEF'
+background-transparency-percent=7
+
+[:8e141580-8add-45b3-a49f-02a2912957fa]
+foreground-color='#5C5C63637070'
+visible-name='One-dark'
+palette=['#000000000000', '#E0E06C6C7575', '#9898C3C37979', '#D1D19A9A6666', '#6161AFAFEFEF', '#C6C67878DDDD', '#5656B6B6C2C2', '#ABABB2B2BFBF', '#5C5C63637070', '#E0E06C6C7575', '#9898C3C37979', '#D1D19A9A6666', '#6161AFAFEFEF', '#C6C67878DDDD', '#5656B6B6C2C2', '#FFFFFEFEFEFE']
+use-system-font=false
+use-transparent-background=true
+use-theme-colors=false
+font='Monospace 10'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#ABABB2B2BFBF'
+background-color='#1E1E21212727'
+background-transparency-percent=21
+
+[/]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b6ec8403-9356-4054-bbaa-e5168eddb93c', '5eb2b80a-0e5c-47ce-a2e2-62f9d87c0545', 'ce5d71c4-e67f-40c5-8330-0c5ec4b6c32d', 'dbe681fe-b94d-4a77-a0f0-2fbc01de5630', '8e141580-8add-45b3-a49f-02a2912957fa', '552146cd-c03b-44a5-b35e-a2f2a806e262']
+default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
+
+[:dbe681fe-b94d-4a77-a0f0-2fbc01de5630]
+foreground-color='#D4D4D4D4D4D4'
+visible-name='Chalk'
+palette=['#646464646464', '#F5F58E8E8E8E', '#A9A9D3D3ABAB', '#FEFED3D37E7E', '#7A7AABABD4D4', '#D6D6ADADD5D5', '#7979D4D4D5D5', '#D4D4D4D4D4D4', '#646464646464', '#F5F58E8E8E8E', '#A9A9D3D3ABAB', '#FEFED3D37E7E', '#7A7AABABD4D4', '#D6D6ADADD5D5', '#7979D4D4D5D5', '#D4D4D4D4D4D4']
+use-system-font=false
+use-transparent-background=true
+use-theme-colors=false
+font='Monospace 10'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#D4D4D4D4D4D4'
+background-color='#2D2D2D2D2D2D'
+background-transparency-percent=21
+
+[:b6ec8403-9356-4054-bbaa-e5168eddb93c]
+foreground-color='rgb(101,123,131)'
+visible-name='demo'
+use-system-font=false
+use-transparent-background=false
+use-theme-colors=false
+font='Monospace 13'
+use-theme-transparency=false
+bold-color-same-as-fg=false
+background-color='rgb(253,246,227)'
+background-transparency-percent=21
+
+[:ce5d71c4-e67f-40c5-8330-0c5ec4b6c32d]
+foreground-color='#f2f2f2f2f2f2'
+visible-name='Elic'
+palette=['#303030303030', '#e1e132321a1a', '#6a6ab0b01717', '#ffffc0c00505', '#72729F9FCFCF', '#ecec00004848', '#f2f2f2f2f2f2', '#2a2aa7a7e7e7', '#5d5d5d5d5d5d', '#ffff36361e1e', '#7b7bc9c91f1f', '#ffffd0d00a0a', '#00007171ffff', '#ffff1d1d6262', '#4b4bb8b8fdfd', '#a0a02020f0f0']
+use-system-font=false
+use-transparent-background=true
+use-theme-colors=false
+font='Monospace 10'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#2a2aa7a7e7e7'
+background-color='#4A4A45453E3E'
+background-transparency-percent=21
