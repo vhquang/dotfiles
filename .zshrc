@@ -110,12 +110,16 @@ if [ -f ~/.functions ]; then
     source ~/.functions
 fi
 
-VIRTUAL_ENV_DISABLE_PROMPT=1
-ZSH_PROMPT="$PROMPT"
 
+VIRTUAL_ENV_DISABLE_PROMPT=1
+# may also need to hide conda prompt
+# conda config --set changeps1 False
+
+__temp_zsh_prompt="$PROMPT"
 PROMPT='
 $(set_zsh_virtualenv)
-'"$(trim_lead_line $ZSH_PROMPT)"
+'"$(trim_lead_line $__temp_zsh_prompt)"
+unset __temp_zsh_prompt;
 
 # User configuration
 
