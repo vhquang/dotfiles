@@ -106,9 +106,17 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-if [ -f ~/.functions ]; then
-    source ~/.functions
-fi
+optional_source_files=(
+    .functions
+    .aliases
+    .env
+)
+for i in "${optional_source_files[@]}"; do
+    if [ -f "$i" ]; then
+        echo "$i"
+    fi
+done
+unset optional_source_files
 
 
 VIRTUAL_ENV_DISABLE_PROMPT=1
