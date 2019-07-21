@@ -28,10 +28,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # source ~/.bash_profile
 
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-source $HOME/.bin_path
-
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
     export TERM='gnome-256color';
 elif infocmp xterm-256color >/dev/null 2>&1; then
@@ -107,9 +103,11 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 optional_source_files=(
+    .env
+    .bin_path
+    .custom_bin_path
     .functions
     .aliases
-    .env
 )
 for i in "${optional_source_files[@]}"; do
     if [ -f "$HOME/$i" ]; then
