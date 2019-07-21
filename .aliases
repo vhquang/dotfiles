@@ -131,4 +131,9 @@ alias pythonpath='export PYTHONPATH=`pwd`'
 alias logtail="source ~/.log_remote_server.sh $1 $2"
 alias hg_close="hg commit --close-branch -m 'close branch'"
 
-alias compile="g++ -Wall -Werror -g3 -fsanitize=address -fno-omit-frame-pointer -Wno-format-security -lpthread -static-libasan -Wextra -O2 "
+alias compile="g++ -Wall -Werror -Wextra \
+		-g3 -fsanitize=address -fno-omit-frame-pointer -Wno-format-security \
+		-lpthread \
+		-std=c++17 \
+		 "
+		# -static-libasan -O2 \

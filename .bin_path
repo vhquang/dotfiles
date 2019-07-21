@@ -1,10 +1,19 @@
-# set path for Go
-export GOPATH=$HOME/Dropbox/Codes/gocode
-export PATH=$PATH:$GOPATH/bin
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/include:/usr/local/sbin:$PATH
 
-# set path for Android adb
-# export PATH=$PATH:$HOME/Documents/android-sdk-macosx/platform-tools
-# export PATH=$PATH:$HOME/Documents/android-sdk-macosx/tools
+
+# setup python environment
+if type "virtualenvwrapper.sh" > /dev/null; then
+    source virtualenvwrapper.sh
+fi
+export PIP_REQUIRE_VIRTUALENV=true
+gpip(){
+   # bypass pip requirement for active virtualenv, use for update global package
+   # ex: gpip install --upgrade pip setuptools wheel virtualenv
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+export PATH="$HOME/miniconda3/bin:$PATH"
+
 
 # build system for arrow
 export ARROW_BUILD_TYPE=release
@@ -23,38 +32,11 @@ export PARQUET_HOME=$CONDA_PREFIX
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
-# setup python environment
-if type "virtualenvwrapper.sh" > /dev/null; then
-    source virtualenvwrapper.sh
-fi
-# export PIP_REQUIRE_VIRTUALENV=true
-gpip(){
-   # bypass pip requirement for active virtualenv, use for update global package
-   # ex: gpip install --upgrade pip setuptools wheel virtualenv
-   PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$($HOME'/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 # path for mysql
-PATH="/usr/local/mysql/bin:${PATH}"
+[[ -d "/usr/local/mysql/bin" ]] && export PATH="$PATH:/usr/local/mysql/bin"
 
 # rabbitMQ
-PATH="/usr/local/sbin:${PATH}"
+# [[ -d "/usr/local/sbin" ]] && export PATH="/usr/local/sbin:${PATH}"
 
 export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
