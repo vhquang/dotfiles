@@ -111,7 +111,7 @@ optional_source_files=(
 )
 for i in "${optional_source_files[@]}"; do
     if [ -f "$HOME/$i" ]; then
-        source "$i";
+        source "$HOME/$i";
     fi
 done
 unset optional_source_files
