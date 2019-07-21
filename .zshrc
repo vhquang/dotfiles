@@ -112,8 +112,8 @@ optional_source_files=(
     .env
 )
 for i in "${optional_source_files[@]}"; do
-    if [ -f "$i" ]; then
-        echo "$i"
+    if [ -f "$HOME/$i" ]; then
+        source "$i";
     fi
 done
 unset optional_source_files
