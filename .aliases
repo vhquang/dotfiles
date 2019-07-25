@@ -129,7 +129,12 @@ alias suspend-vagrant="cd ~/vagrant/box && vagrant suspend && cd -"
 alias chrome="open -a Google\ Chrome"
 alias pythonpath='export PYTHONPATH=`pwd`'
 alias logtail="source ~/.log_remote_server.sh $1 $2"
+
 alias hg_close="hg commit --close-branch -m 'close branch'"
+
+# load nvm and node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && alias nvm_init="source $NVM_DIR/nvm.sh"
 
 alias compile="g++ -Wall -Werror -Wextra \
 		-g3 -fsanitize=address -fno-omit-frame-pointer -Wno-format-security \
