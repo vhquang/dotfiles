@@ -142,3 +142,6 @@ alias compile="g++ -Wall -Werror -Wextra \
 		-std=c++17 \
 		 "
 		# -static-libasan -O2 \
+
+# this need to go into custom env
+alias lunch='python -c "from RALib.core import util; import datetime; print(util.myra_lunch_by_date(datetime.date.today()))"'
