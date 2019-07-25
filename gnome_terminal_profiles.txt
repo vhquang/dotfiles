@@ -1,3 +1,7 @@
+[/]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b6ec8403-9356-4054-bbaa-e5168eddb93c', '5eb2b80a-0e5c-47ce-a2e2-62f9d87c0545', 'ce5d71c4-e67f-40c5-8330-0c5ec4b6c32d', 'dbe681fe-b94d-4a77-a0f0-2fbc01de5630', '8e141580-8add-45b3-a49f-02a2912957fa', '552146cd-c03b-44a5-b35e-a2f2a806e262']
+default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
+
 [:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 foreground-color='rgb(255,255,255)'
 visible-name='transparent'
@@ -53,10 +57,6 @@ bold-color-same-as-fg=true
 bold-color='#ABABB2B2BFBF'
 background-color='#1E1E21212727'
 background-transparency-percent=21
-
-[/]
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b6ec8403-9356-4054-bbaa-e5168eddb93c', '5eb2b80a-0e5c-47ce-a2e2-62f9d87c0545', 'ce5d71c4-e67f-40c5-8330-0c5ec4b6c32d', 'dbe681fe-b94d-4a77-a0f0-2fbc01de5630', '8e141580-8add-45b3-a49f-02a2912957fa', '552146cd-c03b-44a5-b35e-a2f2a806e262']
-default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
 
 [:dbe681fe-b94d-4a77-a0f0-2fbc01de5630]
 foreground-color='#D4D4D4D4D4D4'
