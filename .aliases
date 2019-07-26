@@ -143,7 +143,9 @@ alias compile="g++ -Wall -Werror -Wextra \
 		 "
 		# -static-libasan -O2 \
 
-alias pretest="compile $1 && ./a.out < input.txt"
+function pretest() {
+    compile $1 && ./a.out < input.txt
+}
 
 # this need to go into custom env
 alias lunch='python -c "from RALib.core import util; import datetime; print(util.myra_lunch_by_date(datetime.date.today()))"'
