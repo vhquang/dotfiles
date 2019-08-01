@@ -121,6 +121,8 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 # may also need to hide conda prompt
 # conda config --set changeps1 False
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+
 __temp_zsh_prompt="$PROMPT"
 PROMPT='
 $(set_zsh_virtualenv)
