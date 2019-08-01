@@ -161,3 +161,7 @@ unset __temp_zsh_prompt;
 
 # tell brew not to use git credential for public repo
 export HOMEBREW_NO_GITHUB_API=1
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+    source /etc/profile.d/vte.sh
+fi
