@@ -25,11 +25,16 @@ function install_python() {
         install_dir="${_py_bin_dir%/bin}"
 
         make clean
-        ./configure --prefix=$install_dir && \
+        # TODO need to fix "OpenSSL module not found" error
+        ./configure --prefix=$install_dir \
+                    --enable-loadable-sqlite-extensions \
+                    --with-ensurepip=install \
+                    --with-openssl="$CONDA_PREFIX/include/" \
+                    --with-ssl-default-suites=openssl && \
                 make -j 8 && make install
 
         # set new python symlink
-        echo "Replacing $_py_bin_dir/python3"
+        echo "" && echo "Replacing $_py_bin_dir/python3" && echo ""
         _py_version=$($unpack_dir/python --version)
         _py_version_short=${_py_version:7:3}
         cd $_py_bin_dir
