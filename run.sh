@@ -1,31 +1,32 @@
 function install_python() {
-    _tmp_dir="/tmp/temp_install_python"
-    echo "setting up $_tmp_dir"
-    rm -rf $_tmp_dir && mkdir -p $_tmp_dir && cd $_tmp_dir
+    _TEMP_PY_SRC="/tmp/temp_install_python"
+    echo "setting up $_TEMP_PY_SRC \n"
+    rm -rf $_TEMP_PY_SRC && mkdir -p $_TEMP_PY_SRC && cd $_TEMP_PY_SRC
 
-    url=$1
-    filename=$(basename $url)
+    _PY_URL=$1
+    filename=$(basename $_PY_URL)
     unpack_dir="${filename%.*}"
-    wget $url
-    tar xvf $filename && cd $unpack_dir
+    wget $_PY_URL
+    tar xf $filename && cd $unpack_dir
 
     bin_dir=$(dirname $(which python))
     install_dir="${bin_dir%/bin}"
 
     echo "replacing $bin_dir/python3"
-    rm -f "$bin_dir"/python3
-    ./configure --prefix=$install_dir
-    make clean && make -j 8 && make install
+    rm -f "$bin_dir"/python3 "$bin_dr"/python
+    ./configure --prefix=$install_dir && \
+            make clean && \
+            make -j 8 && make install
 
-    unset url
+    unset _PY_URL
     unset filename
-    unset _tmp_dir
+    unset _TEMP_PY_SRC
 }
 
 
 function setup_conda() {
     conda remove --all -yn py38b3
-    conda create -yn py38b3 python=3 && conda activate py38b3
+    conda create -n py38b3 -y python=3 && conda activate py38b3
 }
 
 setup_conda
