@@ -30,8 +30,8 @@ function install_python() {
         ./configure --prefix=$install_dir \
                     --enable-loadable-sqlite-extensions \
                     --with-ensurepip=install \
-                    --with-openssl="/home/vu/.linuxbrew/Cellar/openssl/1.0.2r" \
-                    --with-ssl-default-suites=openssl && \
+                    --with-ssl-default-suites=openssl \
+                    --with-openssl="/home/vu/.linuxbrew/Cellar/openssl/1.0.2r/" && \
                 make -j 8 && make install
 
         # set new python symlink
@@ -60,3 +60,4 @@ function setup_conda() {
 
 # setup_conda
 install_python https://www.python.org/ftp/python/3.8.0/Python-3.8.0b3.tgz
+# install_python https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
