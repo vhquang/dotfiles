@@ -26,10 +26,11 @@ function install_python() {
 
         make clean
         # TODO need to fix "OpenSSL module not found" error
+        # TODO need to make openssl path a parameter
         ./configure --prefix=$install_dir \
                     --enable-loadable-sqlite-extensions \
                     --with-ensurepip=install \
-                    --with-openssl="$CONDA_PREFIX/include/" \
+                    --with-openssl="/home/vu/.linuxbrew/Cellar/openssl/1.0.2r" \
                     --with-ssl-default-suites=openssl && \
                 make -j 8 && make install
 
