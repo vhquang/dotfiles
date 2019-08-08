@@ -1,0 +1,76 @@
+/* gnome/tilix terminal */
+/* copy to: ~/.config/gtk-3.0/gtk.css */
+
+/* .terminal-titlebar:active {
+    background-color: red;
+} */
+
+/* terminal-window notebook > header.top button {
+    padding: 0 0 0 0;
+    background-image: none;
+    border: 0;
+    margin-right: 10px;
+}
+terminal-window notebook > header.top > tabs > tab {
+    background-color: red;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+terminal-window notebook > header.top > tabs > tab label {
+    background-color: red;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+} */
+
+TerminalWindow .notebook tab:active {
+    border: 1px solid @border-grey;
+    /* background-color: shade(@active-grey, 1); */
+    /* background-color: red; */
+}
+
+TerminalWindow .notebook tab {
+    /* background-color: shade(@bg-grey, 1); */
+    /* background-color: red; */
+}
+
+.notebook tab {
+    background-color: #999
+}
+.notebook tab:active {
+    background-color: #ddd;
+}
+
+.terminal-titlebar:active {
+	background-color: #666;
+}
+.terminal-titlebar:active {
+	background-color: #eee;
+}
+
+
+/* @define-color terminal_bg #300a24;
+@define-color bg_color_active_tab #157bb7;
+
+notebook tab,
+notebook tab:hover {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                    from (shade (@fg_color, 0.92)),
+                                    color-stop (0.60, shade (@fg_color, 0.9)),
+                                    to (shade (@fg_color, 0.85)));
+    color: @bg_color;
+    font-size: 10px;
+    font-family: monospace;
+}
+
+notebook tab:checked {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                    from (shade (@bg_color_active_tab, 1.2)),
+                    to (shade (@bg_color_active_tab, 1.12)));
+    color: @bg_color;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+notebook tab .tilix-small-button {
+    background-color: #def;
+} */
