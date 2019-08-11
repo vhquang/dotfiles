@@ -144,7 +144,7 @@ alias compile="g++ -Wall -Werror -Wextra \
 		# -static-libasan -O2 \
 
 function pretest() {
-    compile $1 && ./a.out < input.txt && rm ./a.out
+    compile $1 && ./a.out < input.txt && rm -rf ./a.out*
 }
 
 # this need to go into custom env
