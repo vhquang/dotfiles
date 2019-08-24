@@ -5,7 +5,7 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/include:/usr/local/sbin:$PATH
 if type "virtualenvwrapper.sh" > /dev/null; then
     source virtualenvwrapper.sh
 fi
-export PIP_REQUIRE_VIRTUALENV=true
+# export PIP_REQUIRE_VIRTUALENV=true
 gpip(){
    # bypass pip requirement for active virtualenv, use for update global package
    # ex: gpip install --upgrade pip setuptools wheel virtualenv
