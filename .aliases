@@ -134,7 +134,8 @@ alias hg_close="hg commit --close-branch -m 'close branch'"
 
 # load nvm and node
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && alias nvm_init="source $NVM_DIR/nvm.sh"
+# this loads nvm and nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && alias nvm_init="source $NVM_DIR/nvm.sh && source $NVM_DIR/bash_completion"
 
 alias compile="g++ -Wall -Werror -Wextra \
 		-g3 -fsanitize=address -fno-omit-frame-pointer -Wno-format-security \
@@ -144,7 +145,7 @@ alias compile="g++ -Wall -Werror -Wextra \
 		# -static-libasan -O2 \
 
 function pretest() {
-    compile $1 && ./a.out < input.txt && rm ./a.out
+    compile $1 && ./a.out < input.txt && rm -rf ./a.out*
 }
 
 # this need to go into custom env
