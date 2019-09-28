@@ -123,9 +123,23 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 
+# Displays the exec time of the last command if set threshold was exceeded
+# copy from refined.zsh-theme
+cmd_exec_time() {
+    local stop=`date +%s`
+    local start=${__cmd_timestamp:-$stop}
+    let local elapsed=$stop-$start
+    [ $elapsed -gt 5 ] && echo %{$fg[yellow]%}${elapsed}s%{$reset_color%}
+}
+
+# Get the initial timestamp for cmd_exec_time
+preexec() {
+    __cmd_timestamp=`date +%s`
+}
+
 __temp_zsh_prompt="$PROMPT"
 PROMPT='
-$(set_zsh_virtualenv)
+$(set_zsh_virtualenv) $(cmd_exec_time)
 '"$(trim_lead_line $__temp_zsh_prompt)"
 unset __temp_zsh_prompt;
 
