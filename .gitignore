@@ -14,3 +14,7 @@ Thumbs.db
 .Trashes
 .extra
 .custom_bin_path
+
+# editor settings
+.idea
+.vscode
