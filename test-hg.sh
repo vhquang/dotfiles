@@ -2,11 +2,12 @@ rm -rf hg-repo && hg init hg-repo
 rm -rf git-repo && git init git-repo
 
 pushd hg-repo
-hg --version > version.txt && hg add . && hg commit -m 'hg init'
+hg --version | head -1 > version.txt && hg add . && hg commit -m 'hg init'
 
 # branch-a
 hg branch branch-a
 echo a >> a.txt && hg add . && hg commit -m 'commit a'
+echo a >> version.txt
 
 # branch default
 hg up default
@@ -16,6 +17,12 @@ hg up branch-a && hg merge default && hg commit -m 'pull update from default'
 
 hg up default && hg merge branch-a && hg commit -m 'merge branch a'
 echo c >> c.txt && hg add . && hg commit -m 'commit c'
+
+# branch-d
+hg branch branch-d
+echo d >> d.txt
+echo d >> a.txt && hg add . && hg commit -m 'commit d'
+hg up default && hg merge branch-d && hg commit -m 'merge into default w/o update'
 
 mkdir -p to-ignore
 echo asdf >> to-ignore/foo.txt && hg add . && hg commit -m 'dump file to ignore'
