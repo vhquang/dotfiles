@@ -123,13 +123,27 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 
+display_duration() {
+    local x=$1
+    local st=''
+    local token=( s m h )
+    for t in "${token[@]}"; do
+        st=$(( x % 60 ))$t$st
+        x=$(( x / 60 ))
+        if [ "$x" -eq 0 ]; then
+            break
+        fi
+    done
+    echo $st
+}
+
 # Displays the exec time of the last command if set threshold was exceeded
 # copy from refined.zsh-theme
 cmd_exec_time() {
     local stop=`date +%s`
     local start=${__cmd_timestamp:-$stop}
     let local elapsed=$stop-$start
-    [ $elapsed -gt 5 ] && echo %{$fg[yellow]%}${elapsed}s%{$reset_color%}
+    [ $elapsed -gt 5 ] && echo %{$fg[yellow]%}$(display_duration $elapsed)%{$reset_color%}
 }
 
 # Get the initial timestamp for cmd_exec_time
@@ -179,3 +193,16 @@ export HOMEBREW_NO_GITHUB_API=1
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte.sh
 fi
+
+conda activate ml
+
+function sync-rl() {
+    rsync \
+        --exclude ".git/" \
+        --exclude "*__pycache__*" \
+        --exclude "*.pyc" \
+        --exclude "*.h5" \
+        --exclude "*.vscode" \
+        --exclude "observations/" \
+        -avh --no-perms ~/code/7642-RL/project_2/  vu@is-vu-01:~/code/7642Fall2019qvu9/project_2;
+}
