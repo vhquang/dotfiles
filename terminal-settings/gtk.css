@@ -1,52 +1,33 @@
 /* gnome/tilix terminal */
 /* copy to: ~/.config/gtk-3.0/gtk.css */
 
-/* .terminal-titlebar:active {
-    background-color: red;
-} */
-
-/* terminal-window notebook > header.top button {
-    padding: 0 0 0 0;
-    background-image: none;
-    border: 0;
-    margin-right: 10px;
+notebook tab {
+    color: #ddd;
+    background-color: #777777;
 }
-terminal-window notebook > header.top > tabs > tab {
-    background-color: red;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-}
-terminal-window notebook > header.top > tabs > tab label {
-    background-color: red;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-} */
-
-TerminalWindow .notebook tab:active {
-    border: 1px solid @border-grey;
-    /* background-color: shade(@active-grey, 1); */
-    /* background-color: red; */
+notebook tab:checked {
+    color: black;
+    background-color: #F0F0F0;
 }
 
-TerminalWindow .notebook tab {
-    /* background-color: shade(@bg-grey, 1); */
-    /* background-color: red; */
-}
-
-.notebook tab {
-    background-color: #999
-}
-.notebook tab:active {
-    background-color: #ddd;
-}
-
-.terminal-titlebar:active {
-	background-color: #666;
+.terminal-titlebar {
+    background-color: rgb(73, 78, 76);
+    border-bottom: none;
+    border-top: none;
 }
 .terminal-titlebar:active {
-	background-color: #eee;
+    background-color: rgb(53, 64, 92);
 }
 
+.terminal-titlebar > button {
+    color: #AAAAAA;
+}
+.terminal-titlebar:active > button {
+    color: #F0F0F0;
+}
+.terminal-titlebar:active > button:hover {
+    color: #777777;
+}
 
 /* @define-color terminal_bg #300a24;
 @define-color bg_color_active_tab #157bb7;
