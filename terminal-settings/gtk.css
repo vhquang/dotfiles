@@ -16,7 +16,7 @@ notebook tab:checked {
     border-top: none;
 }
 .terminal-titlebar:active {
-    background-color: rgb(53, 64, 92);
+    background-color: rgb(57, 67, 90);
 }
 
 .terminal-titlebar > button {
